@@ -74,7 +74,7 @@
 					echo "	</tr>". PHP_EOL;
 					echo "	<tr>". PHP_EOL;
 					echo '		<td colspan="6"><iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/125177845&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=true"></iframe></td>';
-				} elseif ($row['type'] == 'link'){
+				} elseif ($row['type'] == 'file'){
 					echo "	<tr><td colspan='6'><a href='" . $row['url'] . "'>FILE</a></td></tr>" . PHP_EOL;
 				echo "	</tr>" . PHP_EOL;
 					};
