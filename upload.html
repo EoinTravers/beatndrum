@@ -6,43 +6,51 @@
 	<title>Upload Content</title>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 	<meta name="generator" content="Geany 1.23.1" />
+	<script src="js/upload.js"></script>
 </head>
 
 <body>
 	<h1>Upload Content</h1>
 	<form>
 		<table>
-			<tr>
+			<tr id="song_row">
 				<td>Song:</td>
 				<td><input id="song"></input></td>
 			</tr>
-			<tr>
+			<tr id="url_row">
 				<td>URL:</td>
 				<td><input id="url"></input></td>
 			</tr>
-			<tr>
+			<tr id="content_row">
 				<td>Content type:</td>
 				<td>
-					<input type="radio" name="soundcloud" value="soundcloud">SoundCloud<br>
-					<input type="radio" name="file" value="file">File<br>
-					<input type="radio" name="youtube" value="youtube">YouTube<br>
+					<input type="radio" name="content" value="link" onclick="default_fields()">Link<br>
+					<input type="radio" name="content" value="soundcloud" onclick="soundcloud_fields()">SoundCloud<br>
+					<input type="radio" name="content" value="file" onclick="default_fields()">File<br>
+					<input type="radio" name="content" value="youtube" onclick="default_fields()">YouTube<br>
 				</td>
-<!--
-				<td><input id="type"></input></td>
--->
 			</tr>
-			<tr>
+			<tr id="instruments_row">
 				<td>Instruments:</td>
-				<td><input id="instrument"></input></td>
+				<td><input id="instrument" value="All"></input></td>
 			</tr>
-			<tr>
+			<tr id="uploader_row">
 				<td>Uploader:</td>
 				<td><input id="uploader"></input></td>
 			</tr>
-			<tr>
+			<tr id="comments_row">
 				<td>Comments:</td>
 				<td><textarea id="comments"></textarea></td>
 			</tr>
+			<tr id="soundcloud_row" style="display:None">
+				<td>Soundcloud<br>embed code:</td>
+				<td><input id="comments"></textarea></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Submit"></td>
+			</tr>
+			
 		</table>
 	</form>
 	
